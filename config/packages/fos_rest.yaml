@@ -1,6 +1,6 @@
-fos_rest:
-    param_fetcher_listener: true
-    body_listener: true
-    format_listener: false
-    serializer:
-        serialize_null: true
+# fos_rest:
+#     param_fetcher_listener: true
+#     body_listener: true
+#     format_listener: false
+#     serializer:
+#         serialize_null: true
