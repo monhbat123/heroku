@@ -7,6 +7,12 @@ use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Entity\Brand;
+use App\Entity\Category;
+use App\Entity\News;
+use App\Entity\SubCategory;
+use App\Entity\Product;
+use App\Entity\TagNews;
 
 class DashboardController extends AbstractDashboardController
 {
@@ -27,6 +33,11 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linktoDashboard('Dashboard', 'fa fa-home');
-        // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
+        yield MenuItem::linkToCrud('Төрөл', 'fas fa-list', Category::class);
+        yield MenuItem::linkToCrud('Жижиг төрөл', 'fas fa-list', SubCategory::class);
+        yield MenuItem::linkToCrud('Брэнд', 'fas fa-list', Brand::class);
+        yield MenuItem::linkToCrud('Бараа', 'fas fa-list', Product::class);
+        yield MenuItem::linkToCrud('Мэдээний төрөл', 'fas fa-list', TagNews::class);
+        yield MenuItem::linkToCrud('Мэдээ', 'fas fa-list', News::class);
     }
 }

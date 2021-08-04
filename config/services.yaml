@@ -4,7 +4,10 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
 parameters:
-
+    locale: en
+    cloud_storage:
+        scope: '%google_cloud_storage_scope%'
+        key: '%google_cloud_storage_private_key_location%'
 services:
     # default configuration for services in *this* file
     _defaults:
